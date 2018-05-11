@@ -1,6 +1,6 @@
 # USDASearch
 
-### Seed DB
+### Seed DB - 2018-05-11
 
 - Github can't host files bigger than 100mb, so, compressed the USDA sql.
 - Add ecto and postgrex dependencies to catalog app.
@@ -10,7 +10,7 @@
 - Add the sql file to .gitignore
 - Modify `.travis.yml` to run tasks for seeding the db.
 
-### Initial project setup.
+### Initial project setup. - 2018-05-07
 
 - Create new umbrella app (`mix new usda_search --umbrella`).
 - Create empty catalog app within the umbrella `apps` folder (`mix new catalog`).
