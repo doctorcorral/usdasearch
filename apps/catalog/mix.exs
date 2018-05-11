@@ -23,6 +23,8 @@ defmodule Catalog.MixProject do
 
   defp deps do
     [
+      {:postgrex, ">= 0.0.0"},
+      {:ecto, "~> 2.2.10"}
     ]
   end
 end
