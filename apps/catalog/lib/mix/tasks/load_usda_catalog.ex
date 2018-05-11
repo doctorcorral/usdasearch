@@ -15,18 +15,18 @@ defmodule Mix.Tasks.LoadUsdaCatalog do
 
   defp path, do: "#{System.cwd()}/apps/catalog/priv/repo/"
   defp file_name, do: "structure.sql"
-  defp zip_file, do: "#{path()}#{file_name}.zip"
+  defp zip_file, do: "#{path()}#{file_name()}.zip"
 
   defp unzip_file do
     {:ok, _} =
       zip_file()
-      |> String.to_char_list()
+      |> String.to_charlist()
       |> :zip.unzip()
   end
 
   defp move_file do
     sql_file = "#{System.cwd()}/structure.sql"
-    File.cp!(sql_file, "#{path}structure.sql")
+    File.cp!(sql_file, "#{path()}structure.sql")
     File.rm!(sql_file)
   end
 
