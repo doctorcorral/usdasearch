@@ -2,17 +2,9 @@ defmodule Catalog do
   @moduledoc """
   Documentation for Catalog.
   """
+  use Application
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Catalog.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    Catalog.Supervisor.start_link()
   end
 end

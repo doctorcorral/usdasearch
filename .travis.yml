@@ -10,5 +10,7 @@ script:
   - MIX_ENV=test mix do compile --warnings-as-errors
   - mix credo --strict
   - mix dialyzer
+  - MIX_ENV=test mix ecto.create --repo Catalog.Repo
+  - MIX_ENV=test mix load_usda_catalog
   - MIX_ENV=test mix coveralls.travis --umbrella
 
