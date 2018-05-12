@@ -27,3 +27,4 @@ erl_crash.dump
 
 
 /apps/catalog/priv/repo/structure.sql
+/apps/web/assets/node_modules/
