@@ -35,8 +35,8 @@ defmodule Catalog.Nutrition do
     field(:lower_error_bound, :float)
     field(:upper_error_bound, :float)
     field(:comments, :integer)
-    #field(:modification_date, :string)
-    #field(:confidence_code, :string)
+    # field(:modification_date, :string)
+    # field(:confidence_code, :string)
 
     belongs_to(:food, Food)
     belongs_to(:nutrient, Nutrient)

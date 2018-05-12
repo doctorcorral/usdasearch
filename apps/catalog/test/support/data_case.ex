@@ -16,6 +16,7 @@ defmodule Catalog.DataCase do
   alias Ecto.Changeset
   alias Ecto.Adapters.SQL.Sandbox
   alias Catalog.Repo
+
   using do
     quote do
       alias Catalog.Repo
