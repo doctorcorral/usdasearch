@@ -28,6 +28,6 @@ defmodule Catalog.Weight do
   def changeset(weight, params \\ %{}) do
     weight
     |> cast(params, @params)
-    |> cast_assoc(:user)
+    |> cast_assoc(:food)
   end
 end

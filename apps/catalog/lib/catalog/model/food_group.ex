@@ -17,6 +17,6 @@ defmodule Catalog.FoodGroup do
   def changeset(food_group, params \\ %{}) do
     food_group
     |> cast(params, @params)
-    |> cast_assoc(:user)
+    |> cast_assoc(:foods)
   end
 end

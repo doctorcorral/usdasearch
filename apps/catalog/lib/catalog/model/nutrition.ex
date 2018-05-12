@@ -45,6 +45,7 @@ defmodule Catalog.Nutrition do
   def changeset(nutrition, params \\ %{}) do
     nutrition
     |> cast(params, @params)
-    |> cast_assoc(:user)
+    |> cast_assoc(:food)
+    |> cast_assoc(:nutrient)
   end
 end

@@ -22,6 +22,5 @@ defmodule Catalog.Nutrient do
   def changeset(nutrient, params \\ %{}) do
     nutrient
     |> cast(params, @params)
-    |> cast_assoc(:user)
   end
 end
