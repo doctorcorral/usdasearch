@@ -1,5 +1,10 @@
 # USDASearch
 
+### Add empty phoenix web application - 2018-05-11
+
+- Run `mix phx.new web --no-ecto` inside apps folder.
+- Fix static analysis warnings.
+
 ### Seed DB - 2018-05-11
 
 - Github can't host files bigger than 100mb, so, compressed the USDA sql.
