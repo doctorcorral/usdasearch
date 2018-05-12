@@ -2,7 +2,7 @@ defmodule Catalog.Nutrition do
   @moduledoc false
   use Ecto.Schema
   import Ecto.Changeset
-
+  alias Catalog.{Food, Nutrient}
   @params ~w(amount
              num_data_points
              std_error
