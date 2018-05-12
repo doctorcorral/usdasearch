@@ -1,5 +1,9 @@
 # USDASearch
 
+### Schema definition - 2018-05-11
+
+- Added ecto schemas for the tables on the seed database.
+
 ### Seed DB - 2018-05-11
 
 - Github can't host files bigger than 100mb, so, compressed the USDA sql.
