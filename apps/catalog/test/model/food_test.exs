@@ -3,9 +3,13 @@ defmodule Catlog.FoodTest do
   alias Catalog.Food
 
   test "query for food" do
-    term = "butter"
-    query = from(f in Food, where: like(f.short_desc, ^"%#{term}%"))
-    IO.inspect Repo.all(Food)
+    last_word =
+      insert(:food).long_desc
+      |> String.split(" ")
+      |> List.last()
+
+    term = last_word
+    query = from(f in Food, where: like(f.long_desc, ^"%#{term}%"))
     assert(length(Repo.all(query)) > 0)
   end
 end

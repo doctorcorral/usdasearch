@@ -25,6 +25,7 @@ defmodule Catalog.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import Catalog.DataCase
+      import Catalog.Factory
     end
   end
 

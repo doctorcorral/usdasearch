@@ -25,7 +25,9 @@ defmodule Catalog.MixProject do
   defp deps do
     [
       {:postgrex, ">= 0.0.0"},
-      {:ecto, "~> 2.2.10"}
+      {:ecto, "~> 2.2.10"},
+      {:ex_machina, "~> 2.2", only: :test},
+      {:faker, "~> 0.10", only: :test}
     ]
   end
 end
