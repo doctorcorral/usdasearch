@@ -1,4 +1,7 @@
 defmodule Catalog.Factory do
+  @moduledoc """
+  Data factory for testing.
+  """
   alias Catalog.{Repo, FoodGroup, Food}
   use ExMachina.Ecto, repo: Repo
 
