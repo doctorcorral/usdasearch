@@ -1,5 +1,9 @@
 # USDASearch
 
+### Schema definition - 2018-05-11
+
+- Added ecto schemas for the tables on the seed database.
+
 ### Add empty phoenix web application - 2018-05-11
 
 - Run `mix phx.new web --no-ecto` inside apps folder.

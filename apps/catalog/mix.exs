@@ -17,14 +17,17 @@ defmodule Catalog.MixProject do
 
   def application do
     [
-      extra_applications: [:logger]
+      mod: {Catalog, []},
+      extra_applications: [:logger, :ecto, :postgrex]
     ]
   end
 
   defp deps do
     [
       {:postgrex, ">= 0.0.0"},
-      {:ecto, "~> 2.2.10"}
+      {:ecto, "~> 2.2.10"},
+      {:ex_machina, "~> 2.2", only: :test},
+      {:faker, "~> 0.10", only: :test}
     ]
   end
 end
