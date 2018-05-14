@@ -18,6 +18,7 @@ defmodule UsdaSearch.MixProject do
 
   defp deps do
     [
+      {:pre_commit, "~> 0.2.4", only: :dev},
       {:credo, "~> 0.9.2", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.8.1", only: [:test]}
