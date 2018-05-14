@@ -9,14 +9,14 @@ defmodule Catalog.Factory do
 
   def food_group_factory do
     %FoodGroup{
-      name: Beer.style
+      name: Beer.style()
     }
   end
 
   def food_factory do
     %Food{
-      short_desc: Beer.hop,
-      long_desc: Beer.name,
+      short_desc: Beer.hop(),
+      long_desc: Beer.name(),
       food_group: build(:food_group)
     }
   end

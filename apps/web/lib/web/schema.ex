@@ -1,4 +1,7 @@
 defmodule Web.Schema do
+  @moduledoc """
+  Schema for USDA items retrieval
+  """
   use Absinthe.Schema
 
   alias Web.CatalogResolver
