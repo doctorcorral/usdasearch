@@ -15,4 +15,5 @@ script:
   - mix dialyzer
   - MIX_ENV=test mix ecto.create --repo Catalog.Repo
   - MIX_ENV=test mix load_usda_catalog
+  - MIX_ENV=test mix ecto.migrate --repo Catalog.Repo
   - MIX_ENV=test mix coveralls.travis --umbrella
