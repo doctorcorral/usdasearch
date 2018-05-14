@@ -29,6 +29,9 @@ defmodule Catalog.CatalogService do
 
   defp send_result(result, state), do: {:reply, result, state}
 
+  defp do_indexed_search(%{matching: item_name}) when is_binary(item_name),
+    do: do_indexed_search(item_name)
+
   defp do_indexed_search(search_term) do
     search_term
     |> search_query_with_index()
@@ -42,14 +45,18 @@ defmodule Catalog.CatalogService do
   end
 
   defp search_query_with_index(search_term, limit \\ 0.2) do
-    from(f in Food,
+    from(
+      f in Food,
       where: fragment("similarity(?, ?) > ?", f.long_desc, ^search_term, ^limit),
-      preload: [:food_group])
+      preload: [:food_group]
+    )
   end
 
   defp search_query_no_index(search_term) do
-    from(f in Food,
+    from(
+      f in Food,
       where: like(f.long_desc, ^"%#{search_term}%"),
-      preload: [:food_group])
+      preload: [:food_group]
+    )
   end
 end
