@@ -43,10 +43,13 @@ defmodule Catalog.CatalogService do
 
   defp search_query_with_index(search_term, limit \\ 0.2) do
     from(f in Food,
-      where: fragment("similarity(?, ?) > ?", f.long_desc, ^search_term, ^limit))
+      where: fragment("similarity(?, ?) > ?", f.long_desc, ^search_term, ^limit),
+      preload: [:food_group])
   end
 
   defp search_query_no_index(search_term) do
-    from(f in Food, where: like(f.long_desc, ^"%#{search_term}%"))
+    from(f in Food,
+      where: like(f.long_desc, ^"%#{search_term}%"),
+      preload: [:food_group])
   end
 end
