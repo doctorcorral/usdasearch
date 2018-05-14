@@ -1,7 +1,7 @@
 defmodule Catalog.Supervisor do
   @moduledoc false
   use Supervisor
-  alias Catalog.Repo
+  alias Catalog.{Repo, CatalogService}
 
   def start_link do
     Supervisor.start_link(__MODULE__, [])
@@ -13,7 +13,8 @@ defmodule Catalog.Supervisor do
 
   defp children do
     [
-      supervisor(Repo, [])
+      supervisor(Repo, []),
+      worker(CatalogService, [[], [name: CatalogService]])
     ]
   end
 end
