@@ -20,7 +20,9 @@ defmodule UsdaSearch.MixProject do
     [
       {:credo, "~> 0.9.2", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
-      {:excoveralls, "~> 0.8.1", only: [:test]}
+      {:excoveralls, "~> 0.8.1", only: [:test]},
+      {:xprof, "~> 1.3.0", only: :dev},
+      {:exprof, "~> 0.2.0", only: :dev}
     ]
   end
 end
